@@ -22,13 +22,11 @@ body{
 #in{
     outline : 1px solid black;
     margin: 0 auto;
-    margin-top: 1px;
-    margin-left: 2px;
-    height: 291px;
-    width: 236px;
+    height: 292px;
+    width: 238px;
 }
 
 canvas {
-    height: 291px;
-    width: 236px;
+    height: 292px;
+    width: 238px;
 }
