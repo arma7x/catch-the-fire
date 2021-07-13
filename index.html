@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Catch The Fire</title>
+
+
+  </head>
+  <body>
+    <div id="out">
+      <div id="in">
+        <canvas id="13canvas" width="480" height="614"></canvas>
+      </div>
+    </div>
+
+
+    <script src="js/config.js"></script>
+    <script src="js/TinyMusic.min.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/font.js"></script>
+    <script src="js/characters.js"></script>
+    <script src="js/control.js"></script>
+    <script src="js/size.js"></script>
+    <script src="js/generate.js"></script>
+    <script src="js/draw.js"></script>
+    <script src="js/play.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gameFlow.js"></script>
+    <script src="ads-sdk.v4.min.js"></script>
+    <script>
+
+      function displayKaiAds() {
+        var display = true;
+        if (window['kaiadstimer'] == null) {
+          window['kaiadstimer'] = new Date();
+        } else {
+          var now = new Date();
+          if ((now - window['kaiadstimer']) < 300000) {
+            display = false;
+          } else {
+            window['kaiadstimer'] = now;
+          }
+        }
+        console.log('Display Ads:', display);
+        if (!display)
+          return;
+        getKaiAd({
+          publisher: 'ac3140f7-08d6-46d9-aa6f-d861720fba66',
+          app: 'tower-block',
+          slot: 'kaios',
+          onerror: err => console.error(err),
+          onready: ad => {
+            ad.call('display')
+            setTimeout(() => {
+              document.body.style.position = '';
+            }, 1000);
+          }
+        })
+      }
+      window.addEventListener('load', function () {
+        displayKaiAds();
+
+        document.addEventListener('visibilitychange', function(ev) {
+          if (document.visibilityState === 'visible') {
+            displayKaiAds();
+          }
+        });
+
+        document.addEventListener('keydown', (evt) => {
+          if (evt.key === 'Backspace' || evt.key === 'EndCall') {
+            window.close();
+          }
+        });
+
+      });
+    </script>
+
+  </body>
+</html>

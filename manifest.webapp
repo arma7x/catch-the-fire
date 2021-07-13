@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "name": "Catch The Fire",
+  "description": "You are a man who has been lost in the darkness. Try not to be beaten by white ghost and get enough hope to survive.",
+  "launch_path": "/index.html",
+  "theme": "#873eff",
+  "theme_color": "#873eff",
+  "background_color": "#873eff",
+  "categories": [
+    "games"
+  ],
+  "icons": {
+    "56": "/icons/icon56x56.png",
+    "112": "/icons/icon112x112.png"
+  },
+  "developer": {
+    "name": "arma7x",
+    "url": "https://github.com/arma7x"
+  },
+  "origin": "app://catch-the-fire.arma7x.com",
+  "type": "web",
+  "permissions": {},
+  "messages": [],
+  "locales": {
+    "en-US": {
+      "name": "Catch The Fire",
+      "subtitle": "You are a man who has been lost in the darkness. Try not to be beaten by white ghost and get enough hope to survive.",
+      "description": "You are a man who has been lost in the darkness. Try not to be beaten by white ghost and get enough hope to survive."
+    }
+  },
+  "default_locale": "en-US"
+}

@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    overflow:hidden;
+    height: 100%;
+    width: 100%;
+    background-color:black;
+    display: table;
+}
+
+#out{
+    height:100%;
+    width:100%;
+}
+
+#in{
+    outline : 1px solid black;
+    margin: 0 auto;
+    margin-top: 1px;
+    margin-left: 2px;
+    height: 291px;
+    width: 236px;
+}
+
+canvas {
+    height: 291px;
+    width: 236px;
+}
